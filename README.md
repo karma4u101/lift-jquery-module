@@ -1,4 +1,4 @@
-jquery-lift-module
+lift-jquery-module
 ==================
 
 A JQuery Lift Module currently supporting 
