@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.0.1-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.0.2-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
@@ -25,7 +25,12 @@ libraryDependencies <++= liftVersion { v =>
     Nil
 }
 
-
+//################################################################
+//#### THE YUI COMPRESSION BUILD
+//## 
+//##  
+//## 
+//################################################################
 seq(yuiSettings: _*)
 
 excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" 
@@ -33,6 +38,50 @@ excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-m
 excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
 
 YuiCompressorKeys.minSuffix := "-min"
+
+//################################################################
+//#### Publish to Media4u101
+//## 
+//##  
+//## 
+//################################################################
+credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
+
+publishTo <<= version { v: String =>
+   val nexus = "http://www.media4u101.se:8081/nexus/"
+   if (v.trim.endsWith("SNAPSHOT"))
+	 Some("snapshots" at nexus + "content/repositories/snapshots")
+   else
+     Some("releases" at nexus + "content/repositories/releases")
+   }
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+pomIncludeRepository := { x => false }
+
+pomExtra := (
+  <url>http://www.media4u101.org/fobo-lift-template-demo/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://maven.apache.org/ref/2.1.0/maven-profile/license.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>git@github.com:karma4u101/lift-jquery-module.git</url>
+    <connection>scm:git:git@github.com:karma4u101/lift-jquery-module.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>karma4u101</id>
+      <name>Peter Petersson</name>
+      <url>http://www.media4u101.se</url>
+    </developer>
+  </developers>
+)
 
 
 
