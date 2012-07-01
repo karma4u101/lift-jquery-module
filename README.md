@@ -1,12 +1,13 @@
 jquery-lift-module
 ==================
 
-A JQuery Lift Module currntly supporting 
+A JQuery Lift Module currently supporting 
 
-- JQurey v1.7.1 (default)
+- JQurey v1.7.2 (default)
+- JQurey v1.7.1 
 - JQuery v1.6.4
 
-**Currnet module version:** 0.0.2-SNAPSHOT 
+**Currnet module version:** 0.0.3-SNAPSHOT 
 
 The intention of this module is to closely follow the upstream releases. 
 If you have a update request you can either make a pull request or make a update request in a issue report. 
@@ -34,7 +35,7 @@ or if you like to set the version explicitly use
 
     import net.liftmodules.JQueryModule
     :
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     JQueryModule.init()
 
 In Lift template

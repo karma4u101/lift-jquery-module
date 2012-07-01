@@ -33,7 +33,7 @@ package object JQueryModule {
    *
    * {{{
    *   //init params can be skipped if it sets the current default value
-   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
    *   JQueryModule.init()
    * }}}
    * This example is explicitly setting the jquery init param
@@ -42,13 +42,27 @@ package object JQueryModule {
    * '''Example:'''
    *
    * {{{
-   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
    * }}}
    */
   object InitParam extends JQuery {
-    var JQuery: JQuery = JQuery171
+    var JQuery: JQuery = JQuery172
   }
 
+  /**
+   * Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.
+   * @version 1.7.2
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
+   * }}}
+   */
+  case object JQuery172 extends JQuery {
+    ModuleResources.jquery172
+  }
+  
   /**
    * Enable usage of JQuery version 1_7_1 in your bootstrap liftweb Boot.
    * @version 1.7.1
@@ -83,6 +97,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery172 = {
+      ResourceServer.rewrite {
+        case "jqmodule" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
+        case "jqmodule" :: "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
+      }
+    }
+    
     lazy val jquery171 = {
       ResourceServer.rewrite {
         case "jqmodule" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
