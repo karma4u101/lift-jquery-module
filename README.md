@@ -8,6 +8,9 @@ A JQuery Lift Module currntly supporting
 
 **Currnet module version:** 0.0.2-SNAPSHOT 
 
+The intention of this module is to closely follow the upstream releases. 
+If you have a update request you can either make a pull request or make a update request in a issue report. 
+
 Usage
 =====
 
