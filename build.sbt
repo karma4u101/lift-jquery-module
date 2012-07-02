@@ -45,7 +45,8 @@ YuiCompressorKeys.minSuffix := "-min"
 //##  
 //## 
 //################################################################
-credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+//credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"
