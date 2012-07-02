@@ -40,19 +40,19 @@ excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*
 YuiCompressorKeys.minSuffix := "-min"
 
 //################################################################
-//#### Publish to Media4u101
+//#### Publish to sonatype org
 //## 
 //##  
 //## 
 //################################################################
-credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
+credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
 
 publishTo <<= version { v: String =>
-   val nexus = "http://www.media4u101.se:8081/nexus/"
+   val sonatype = "https://oss.sonatype.org/"
    if (v.trim.endsWith("SNAPSHOT"))
-	 Some("snapshots" at nexus + "content/repositories/snapshots")
+	 Some("snapshots" at sonatype + "content/repositories/snapshots")
    else
-     Some("releases" at nexus + "content/repositories/releases")
+     Some("releases" at sonatype + "service/local/staging/deploy/maven2")
    }
 
 publishMavenStyle := true
