@@ -21,11 +21,11 @@ package object JQueryModule {
   def init() {
     LiftRules.addToPackages("net.liftmodules.JQueryModule")
     ResourceServer.allow {
-      case "jqmodule" :: tail => true
+      case "jquery.js" :: nil => true
     }
   }
 
-  abstract trait JQuery
+  abstract trait JQModule
   /**
    * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
    *
@@ -45,8 +45,8 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
    * }}}
    */
-  object InitParam extends JQuery {
-    var JQuery: JQuery = JQuery172
+  object InitParam extends JQModule {
+    var JQuery: JQModule = JQuery172
   }
 
   /**
@@ -59,7 +59,7 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
    * }}}
    */
-  case object JQuery172 extends JQuery {
+  case object JQuery172 extends JQModule {
     ModuleResources.jquery172
   }
   
@@ -73,7 +73,7 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
    * }}}
    */
-  case object JQuery171 extends JQuery {
+  case object JQuery171 extends JQModule {
     ModuleResources.jquery171
   }
 
@@ -88,7 +88,7 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery164
    * }}}
    */
-  case object JQuery164 extends JQuery {
+  case object JQuery164 extends JQModule {
     ModuleResources.jquery164
   }
 
@@ -99,22 +99,22 @@ package object JQueryModule {
 
     lazy val jquery172 = {
       ResourceServer.rewrite {
-        case "jqmodule" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
-        case "jqmodule" :: "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
       }
     }
     
     lazy val jquery171 = {
       ResourceServer.rewrite {
-        case "jqmodule" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
-        case "jqmodule" :: "jquery.js" :: Nil => List("jquery", "1.7.1", "js", "jquery-min.js")
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.7.1", "js", "jquery-min.js")
       }
     }
 
     lazy val jquery164 = {
       ResourceServer.rewrite {
-        case "jqmodule" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.6.4", "js", "jquery.js")
-        case "jqmodule" :: "jquery.js" :: Nil => List("jquery", "1.6.4", "js", "jquery-min.js")
+        case  "jquery.js" :: Nil if Props.devMode => List("jquery", "1.6.4", "js", "jquery.js")
+        case  "jquery.js" :: Nil => List("jquery", "1.6.4", "js", "jquery-min.js")
       }
     }
 

@@ -7,7 +7,7 @@ A JQuery Lift Module currently supporting
 - JQurey v1.7.1 
 - JQuery v1.6.4
 
-**Currnet module version:** 0.0.3-SNAPSHOT 
+**Currnet module version:** 0.0.4-SNAPSHOT 
 
 The intention of this module is to closely follow the upstream releases. 
 If you have a update request you can either make a pull request or make a update request in a issue report. 
@@ -43,6 +43,6 @@ In Lift template
 
 Add 
 
-    <script id="jquery" src="/classpath/jqmodule/jquery.js" type="text/javascript"></script>
+    <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
 
 
