@@ -9,7 +9,10 @@ A Lift JQuery Module currently supporting
 
 **Current module version:** 0.0.4-SNAPSHOT 
 
-The intention of this module is to closely follow the upstream releases. 
+**Usage Benefits:** 
+- Very Smoth upgrade/downgrade (at most a one-liner change in your project). 
+- The intention of this module is to closely follow the upstream releases.
+ 
 If you have a update request you can either make a pull request or make a update request in a issue report. 
 
 Usage
@@ -45,4 +48,7 @@ Add
 
     <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
 
+Usage example
+-------------
 
+For a usage example take a look att my [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)
