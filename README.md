@@ -12,9 +12,9 @@ A Lift JQuery Module currently supporting
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
 
 **Usage Benefits:** 
-- Very Smoth upgrade/downgrade (at most a one-liner change in your project). 
+- Very Smooth up/down-grade (at most a one-liner change in your project). 
 - The intention of this module is to closely follow the upstream releases.
-- Compile from same source the module will automaticaly give you minified files in production.
+- Compile from same source the module will automatically give you minified files in production.
  
 If you have a update request you can either make a pull request or make a update request in a issue report. 
 
