@@ -1,13 +1,13 @@
 lift-jquery-module
 ==================
 
-A JQuery Lift Module currently supporting 
+A Lift JQuery Module currently supporting 
 
 - JQurey v1.7.2 (default)
 - JQurey v1.7.1 
 - JQuery v1.6.4
 
-**Currnet module version:** 0.0.4-SNAPSHOT 
+**Current module version:** 0.0.4-SNAPSHOT 
 
 The intention of this module is to closely follow the upstream releases. 
 If you have a update request you can either make a pull request or make a update request in a issue report. 
