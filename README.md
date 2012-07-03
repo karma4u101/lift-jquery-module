@@ -9,9 +9,12 @@ A Lift JQuery Module currently supporting
 
 **Current module version:** 0.0.4-SNAPSHOT 
 
+As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
+
 **Usage Benefits:** 
 - Very Smoth upgrade/downgrade (at most a one-liner change in your project). 
 - The intention of this module is to closely follow the upstream releases.
+- Compile from same source the module will automaticaly give you minified files in production.
  
 If you have a update request you can either make a pull request or make a update request in a issue report. 
 
@@ -40,6 +43,8 @@ or if you like to set the version explicitly use
     :
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     JQueryModule.init()
+
+With the second setup option you chose when and what version to use.
 
 In Lift template
 ----------------
