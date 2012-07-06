@@ -2,9 +2,9 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
+liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.0.4-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-1.0" }
 
 crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
@@ -45,8 +45,10 @@ YuiCompressorKeys.minSuffix := "-min"
 //##  
 //## 
 //################################################################
-//credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
-credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+
+//pgpPublicRing := file("/home/peter/.gnupg/mykey.asc")
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"
@@ -63,7 +65,7 @@ publishArtifact in Test := false
 pomIncludeRepository := { x => false }
 
 pomExtra := (
-  <url>http://www.media4u101.org/fobo-lift-template-demo/</url>
+  <url>https://github.com/karma4u101/lift-jquery-module</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
