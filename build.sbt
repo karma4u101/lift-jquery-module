@@ -2,9 +2,9 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.4"
+liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-1.0" }
+version <<= liftVersion apply { _ + "-1.0-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
