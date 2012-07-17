@@ -15,8 +15,8 @@ logLevel := Level.Info
 scalacOptions ++= Seq("-deprecation")
 
 resolvers ++= Seq(
-  "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
-  "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/"
+  "Scala Tools Snapshot" at "http://oss.sonatype.org/content/repositories/snapshots",
+  "Scala Tools Releases" at "http://oss.sonatype.org/content/repositories/releases"
 )
 
 libraryDependencies <++= liftVersion { v =>
