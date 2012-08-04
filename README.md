@@ -7,7 +7,7 @@ A Lift JQuery Module currently supporting
 - JQurey v1.7.1 
 - JQuery v1.6.4
 
-**Current module version:** 0.0.4-SNAPSHOT 
+**Current module version:** 1.0-SNAPSHOT 
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
 
@@ -35,16 +35,11 @@ In bootstrap.liftweb.Boot
 
 Add
 
-    net.liftmodules.JQueryModule.init() 
-
-or if you like to set the version explicitly use 
-
     import net.liftmodules.JQueryModule
     :
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     JQueryModule.init()
 
-With the second setup option you chose when and what version to use.
 
 In Lift template
 ----------------
