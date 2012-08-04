@@ -24,11 +24,11 @@ Usage
 In your build system
 --------------------
 
-For example in build.sbt add dependancy on 
+For example in build.sbt add dependency on 
 
     "net.liftmodules" %% "lift-jquery-module" % (liftVersion+"-X.Y.Z-SNAPSHOT")
 
-Wher *X.Y.Z-SNAPSHOT* is the module version.
+Where *X.Y.Z-SNAPSHOT* is the module version.
 
 In bootstrap.liftweb.Boot
 -------------------------  
