@@ -6,17 +6,17 @@ liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
 version <<= liftVersion apply { _ + "-1.0-SNAPSHOT" }
 
-crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1", "2.9.0-1", "2.9.0")
+scalaVersion  := "2.9.2"
 
-scalaVersion  := "2.9.1"
+scalacOptions ++= Seq("-unchecked", "-deprecation")
+
+crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1", "2.9.0-1", "2.9.0")
 
 logLevel := Level.Info  
 
-scalacOptions ++= Seq("-deprecation")
-
 resolvers ++= Seq(
-  "Scala Tools Snapshot" at "http://oss.sonatype.org/content/repositories/snapshots",
-  "Scala Tools Releases" at "http://oss.sonatype.org/content/repositories/releases"
+  "CB Central Mirror" at "http://repo.cloudbees.com/content/groups/public",
+  "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
 )
 
 libraryDependencies <++= liftVersion { v =>
