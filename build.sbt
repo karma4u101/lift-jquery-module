@@ -2,15 +2,15 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
+liftVersion <<= liftVersion ?? "2.5-M1"
 
-version <<= liftVersion apply { _ + "-1.0-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-1.0" }
 
 scalaVersion  := "2.9.2"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
-crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1", "2.9.0-1", "2.9.0")
+crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
 logLevel := Level.Info  
 
@@ -45,8 +45,8 @@ YuiCompressorKeys.minSuffix := "-min"
 //##  
 //## 
 //################################################################
-//credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
-credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
 //pgpPublicRing := file("/home/peter/.gnupg/mykey.asc")
 
