@@ -3,11 +3,14 @@ lift-jquery-module
 
 A Lift JQuery Module currently supporting 
 
-- JQurey v1.7.2 (default)
+- JQurey v1.7.2 
 - JQurey v1.7.1 
 - JQuery v1.6.4
 
-**Current module version:** 1.0-SNAPSHOT 
+**Current module version:** 1.0 
+
+**Stable releases:** 
+- **2012-09-11** Released for Lift 2.5-M1 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
 
