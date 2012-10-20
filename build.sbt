@@ -2,7 +2,7 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-M1"
+liftVersion <<= liftVersion ?? "2.5-M2"
 
 version <<= liftVersion apply { _ + "-1.0" }
 
@@ -20,7 +20,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
+    "net.liftweb" %% "lift-webkit"  % v % "compile->default" ::
     "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
     Nil
 }
@@ -46,7 +46,8 @@ YuiCompressorKeys.minSuffix := "-min"
 //## 
 //################################################################
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
-//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+
+credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
 //pgpPublicRing := file("/home/peter/.gnupg/mykey.asc")
 
