@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.5-M2"
 
-version <<= liftVersion apply { _ + "-1.0" }
+version <<= liftVersion apply { _ + "-2.0-SNAPSHOT" }
 
 scalaVersion  := "2.9.2"
 
@@ -20,8 +20,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit"  % v % "compile->default" ::
-    "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
+    "net.liftweb" %% "lift-webkit"  % v % "compile" ::
+    "net.liftweb" %% "lift-testkit" % v % "compile" ::
     Nil
 }
 
