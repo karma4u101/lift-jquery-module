@@ -3,9 +3,10 @@ lift-jquery-module
 
 A Lift JQuery Module currently supporting 
 
-- JQurey v1.8.2
-- JQurey v1.7.2 
-- JQurey v1.7.1 
+
+- JQuery v1.8.2
+- JQuery v1.7.2
+- JQuery v1.7.1
 - JQuery v1.6.4
 
 **Current module version:** 2.0-SNAPSHOT
