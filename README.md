@@ -12,10 +12,10 @@ A Lift JQuery Module currently supporting
 **Current module version:** 2.0-SNAPSHOT
 
 **Latest updates** 
-- **2012-11-03** Added JQuery v1.8.2
+- **2012-11-03** Added JQuery v1.8.2 (2.0-SNAPSHOT's released for lift 2.5-M2)
 
 **Stable releases:** 
-- **2012-09-11** Released for Lift 2.5-M1 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2012-09-11** Released for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
 
