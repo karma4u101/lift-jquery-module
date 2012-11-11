@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-2.0" }
+version <<= liftVersion apply { _ + "-2.0-SNAPSHOT" }
 
 scalaVersion  := "2.9.2"
 
