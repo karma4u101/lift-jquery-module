@@ -12,15 +12,17 @@ A Lift JQuery Module currently supporting
 - **2012-11-10** v2.0
 
 **Latest updates**
-- **2012-11-10** v2.0 artifact releas with JQuery <= v1.8.2 
-- **2012-11-03** v2.0-SNAPSHOT - Added JQuery v1.8.2 
+- **2012-11-11** -- v2.0 Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
+- **2012-11-10** -- v2.0 artifact releas to oss.sonatype.org with JQuery <= v1.8.2 
+- **2012-11-03** -- v2.0-SNAPSHOT - Added JQuery v1.8.2 
 
 **Latest Stable Releases:** 
-- **2012-11-10** v2.0 stable artifact released for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-09-11** v1.0 stable artifact released for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2012-11-10** -- v2.0 stable artifact released for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2012-09-11** -- v1.0 stable artifact released for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 **Latest snapshot Release:**
-- **2012-11-03** v2.0-SNAPSHOT release for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2012-11-11** -- v2.0 published for Lift 2.5-SNAPSHOT
+- **2012-11-03** -- v2.0-SNAPSHOT release for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 

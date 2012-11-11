@@ -2,7 +2,7 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-M3"
+liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
 version <<= liftVersion apply { _ + "-2.0" }
 
