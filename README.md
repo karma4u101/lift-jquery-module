@@ -19,6 +19,7 @@ A Lift JQuery Module currently supporting
 - **2012-11-10** -- v2.0 artifact releas to oss.sonatype.org with JQuery <= v1.8.2 
 - **2012-11-03** -- v2.0-SNAPSHOT - Added JQuery v1.8.2 
 
+<<<<<<< HEAD
 **Latest Stable Releases:**
 - **2013-01-22** -- v2.2 stable artifact released for Lift 2.5-RC1 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-01-11** -- v2.1 stable artifact released for Lift 2.5-M4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 )
