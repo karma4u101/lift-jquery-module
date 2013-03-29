@@ -46,7 +46,7 @@ package object JQueryModule {
    * }}}
    */
   object InitParam extends JQModule {
-    var JQuery: JQModule = JQuery172
+    var JQuery: JQModule = null
   }
 
   /**
