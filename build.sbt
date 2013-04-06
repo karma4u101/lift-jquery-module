@@ -2,19 +2,19 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-version := "2.3"
+version := "2.4-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC4"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 
-liftVName in ThisBuild <<= liftVersion apply { _.substring(0,3) }
+liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
-name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
+name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 //liftVersion <<= liftVersion ?? "2.5-RC4"
 
 //version <<= liftVersion apply { _ + "-2.3" }
 
-scalaVersion  := "2.9.1"
+scalaVersion  := "2.10.0"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 

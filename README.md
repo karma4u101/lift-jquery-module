@@ -16,7 +16,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 
 **Latest updates**
 
-- **2013-04-06** -- v2.3 Stable build for Lift RC4. New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
+- **2013-04-06** -- v2.3 build for Lift v2.5 (using Lift RC4). New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
 - **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 
 **Latest Stable Releases:**
@@ -71,7 +71,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
 
 For older versions <= 2.3 put the following in your project build.sbt files lift libraryDependencies section 
 
-    "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]") 
+    "net.liftmodules" %% "lift-jquery-module" % (liftVersion+"-[module version]") 
 
 In bootstrap.liftweb.Boot
 -------------------------  
