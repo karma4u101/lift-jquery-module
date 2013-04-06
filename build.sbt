@@ -2,11 +2,19 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "3.0-SNAPSHOT"
+version := "2.3"
 
-version <<= liftVersion apply { _ + "-2.3-SNAPSHOT" }
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC4"
 
-scalaVersion  := "2.10.0"
+liftVName in ThisBuild <<= liftVersion apply { _.substring(0,3) }
+
+name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
+
+//liftVersion <<= liftVersion ?? "2.5-RC4"
+
+//version <<= liftVersion apply { _ + "-2.3" }
+
+scalaVersion  := "2.9.1"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
@@ -20,8 +28,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit"  % v % "compile" ::
-    "net.liftweb" %% "lift-testkit" % v % "compile" ::
+    "net.liftweb" %% "lift-webkit"  % v % "provided" ::
+    "net.liftweb" %% "lift-testkit" % v % "provided" ::
     Nil
 }
 
