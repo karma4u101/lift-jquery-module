@@ -15,15 +15,16 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest updates**
+
 - **2013-04-06** -- v2.3 Stable build for Lift RC4. New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
 - **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 
 **Latest Stable Releases:**
+- **2013-04-06** -- v2.3 stable artifact released for Lift 2.5 (new version schema)
 - **2013-04-06** -- v2.3 stable artifact released for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
 **Latest snapshot Release:**
 - **2013-04-06** -- v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
-
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
 
