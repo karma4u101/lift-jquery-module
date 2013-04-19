@@ -49,6 +49,10 @@ package object JQueryModule {
     var JQuery: JQModule = null
   }
 
+  case object JQuery191 extends JQModule {
+    ModuleResources.jquery191
+  }
+
   /**
    * Enable usage of JQuery version 1_8_2 in your bootstrap liftweb Boot.
    * @version 1.8.2
@@ -76,7 +80,7 @@ package object JQueryModule {
   case object JQuery172 extends JQModule {
     ModuleResources.jquery172
   }
-  
+
   /**
    * Enable usage of JQuery version 1_7_1 in your bootstrap liftweb Boot.
    * @version 1.7.1
@@ -111,6 +115,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery191 = {
+      ResourceServer.rewrite {
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.9.1", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.9.1", "js", "jquery-min.js")
+      }
+    }
+
     lazy val jquery182 = {
       ResourceServer.rewrite {
         case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.8.2", "js", "jquery.js")
@@ -124,7 +135,7 @@ package object JQueryModule {
         case "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
       }
     }
-    
+
     lazy val jquery171 = {
       ResourceServer.rewrite {
         case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
