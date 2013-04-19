@@ -3,6 +3,7 @@ lift-jquery-module
 
 A Lift JQuery Module currently supporting 
 
+- JQuery v1.9.1
 - JQuery v1.8.2
 - JQuery v1.7.2
 - JQuery v1.7.1
@@ -15,7 +16,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest updates**
-
+- **2013-04-19** -- v2.4-SNAPSHOT Added JQuery v1.9.1
 - **2013-04-06** -- v2.3 build for Lift v2.5 (using Lift RC4). New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
 - **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 

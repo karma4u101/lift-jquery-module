@@ -49,6 +49,16 @@ package object JQueryModule {
     var JQuery: JQModule = null
   }
 
+    /**
+   * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
+   * @version 1.9.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery191
+   * }}}
+   */
   case object JQuery191 extends JQModule {
     ModuleResources.jquery191
   }
