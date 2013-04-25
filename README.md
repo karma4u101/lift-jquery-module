@@ -25,6 +25,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- v2.3 stable artifact released for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
 **Latest snapshot Release:**
+- **2013-04-25** -- v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
 - **2013-04-06** -- v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
 As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
