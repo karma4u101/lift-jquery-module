@@ -16,13 +16,12 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest updates**
+- **2013-04-27** -- v2.4 releas
 - **2013-04-19** -- v2.4-SNAPSHOT Added JQuery v1.9.1
-- **2013-04-06** -- v2.3 build for Lift v2.5 (using Lift RC4). New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
-- **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 
 **Latest Stable Releases:**
+- **2013-04-27** -- v2.4 releas artifact released for Lift 2.5
 - **2013-04-06** -- v2.3 stable artifact released for Lift 2.5 (new version schema)
-- **2013-04-06** -- v2.3 stable artifact released for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
 **Latest snapshot Release:**
 - **2013-04-25** -- v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
@@ -101,7 +100,9 @@ For a usage example take a look att my [Templating-With-Twitter-Bootstrap](https
 ### History log
 ----------------
 
-**Module Version history:**
+**Update history:**
+- **2013-04-06** -- v2.3 build for Lift v2.5 (using Lift RC4). New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
+- **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 - **2013-01-22** -- v2.2 Stable build for Lift RC1
 - **2013-02-15** -- v2.2-SNAPSHOT build for Lift 3.0-SNAPSHOT / Scala 2.10
 - **2013-01-11** -- v2.1 Stable build for Lift M4
@@ -111,13 +112,14 @@ For a usage example take a look att my [Templating-With-Twitter-Bootstrap](https
 - **2012-11-10** -- v2.0 artifact releas to oss.sonatype.org with JQuery <= v1.8.2 
 - **2012-11-03** -- v2.0-SNAPSHOT - Added JQuery v1.8.2 
 
-
-**Updates history:**
+**Stable releas history:**
+- **2013-04-06** -- v2.3 stable artifact released for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-01-22** -- v2.2 stable artifact released for Lift 2.5-RC1 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-01-11** -- v2.1 stable artifact released for Lift 2.5-M4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 )
 - **2012-12-29** -- v2.0 stable artifact released for Lift 2.5-SNAPSHOT (Scala 2.9.2, 2.9.1-1, 2.9.1)
 - **2012-11-10** -- v2.0 stable artifact released for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-09-11** -- v1.0 stable artifact released for Lift 2.5-M2 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+
 
 **Snapshot Release history:**
 - **2013-02-15** -- v2.2-SNAPSHOT published for Lift 3.0-SNAPSHOT / Scala 2.10
