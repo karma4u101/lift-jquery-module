@@ -16,7 +16,8 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest updates**
-- **2013-04-27** -- v2.4 releas
+- **2013-05-13** -- v2.4-SNAPSHOT for Lift 2.6
+- **2013-04-27** -- v2.4 releas for Lift 2.5
 - **2013-04-19** -- v2.4-SNAPSHOT Added JQuery v1.9.1
 
 **Latest Stable Releases:**
@@ -24,6 +25,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest snapshot Release:**
+- **2013-05-13** -- v2.4-SNAPSHOT published for Lift 2.6
 - **2013-04-25** -- v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
 - **2013-04-06** -- v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
