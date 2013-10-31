@@ -1,6 +1,18 @@
 alias pub=publish-local
 
-set version      in ThisBuild:="2.4-SNAPSHOT"
+set version      in ThisBuild:="2.5"
+
+set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
+set scalaVersion in ThisBuild:="2.10.0"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
+pub
+
+
 set liftVersion  in ThisBuild:="2.6-SNAPSHOT"
 set scalaVersion in ThisBuild:="2.10.0"
 
@@ -9,7 +21,6 @@ clean
 update
 compile
 test
-
 pub
 
 set scalaVersion in ThisBuild:="2.9.2"
@@ -19,9 +30,7 @@ clean
 update
 compile
 test
-
 pub
-
 
 set scalaVersion in ThisBuild:="2.9.1-1"
 
@@ -30,7 +39,6 @@ clean
 update
 compile
 test
-
 pub
 
 
@@ -41,6 +49,43 @@ clean
 update
 compile
 test
+pub
 
+
+set liftVersion  in ThisBuild:="2.5"
+set scalaVersion in ThisBuild:="2.10.0"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
+pub
+
+set scalaVersion in ThisBuild:="2.9.2"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
+pub
+
+set scalaVersion in ThisBuild:="2.9.1-1"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
+pub
+
+set scalaVersion in ThisBuild:="2.9.1"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
 pub
 

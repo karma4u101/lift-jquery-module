@@ -10,6 +10,11 @@ import org.specs2.mutable.Specification
 object JQueryModuleSpec extends Specification  {
   "JQueryModuleSpec Specification".title
   
+  "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery1102 the ResourceServer.pathRewriter" should {
+    "rewrit jquery.js to jquery/1.10.2/js/jquery-min.js" in {
+      rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
+    }                             
+  }   
   
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery191 the ResourceServer.pathRewriter" should {
     "rewrit jquery.js to jquery/1.9.1/js/jquery-min.js" in {
@@ -41,6 +46,11 @@ object JQueryModuleSpec extends Specification  {
     }                             
   }  
  
+  def rewriteJQuery1102JS = {
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1102
+    ResourceServer.pathRewriter("jquery.js"::Nil)
+  }
+  
   def rewriteJQuery191JS = {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery191
     ResourceServer.pathRewriter("jquery.js"::Nil)
