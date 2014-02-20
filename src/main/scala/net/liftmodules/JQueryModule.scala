@@ -56,7 +56,7 @@ package object JQueryModule {
    * '''Example:'''
    *
    * {{{
-   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1102
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
    * }}}
    */
   case object JQuery1110 extends JQModule {
