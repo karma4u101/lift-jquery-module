@@ -49,7 +49,20 @@ package object JQueryModule {
     var JQuery: JQModule = JQuery182
   }
 
-     /**
+  /**
+   * Enable usage of JQuery version 1_11_0 in your bootstrap liftweb Boot.
+   * @version 1.11.0
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1102
+   * }}}
+   */
+  case object JQuery1110 extends JQModule {
+    ModuleResources.jquery1110
+  }
+  /**
    * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
    * @version 1.10.2
    *
@@ -63,7 +76,7 @@ package object JQueryModule {
     ModuleResources.jquery1102
   }
   
-    /**
+  /**
    * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
    * @version 1.9.1
    *
@@ -138,6 +151,13 @@ package object JQueryModule {
    * Object holding internally used module resources.
    */
   private object ModuleResources {
+
+    lazy val jquery1110 = {
+      ResourceServer.rewrite {
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.0", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.11.0", "js", "jquery-min.js")
+      }
+    }
 
     lazy val jquery1102 = {
       ResourceServer.rewrite {
