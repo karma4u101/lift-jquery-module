@@ -3,6 +3,7 @@ lift-jquery-module [![Build Status](https://secure.travis-ci.org/karma4u101/lift
 
 A Lift JQuery Module currently supporting 
 
+- JQuery v1.11.0 (availabilaty - module v2.6 and above)
 - JQuery v1.10.2 (availabilaty - module v2.5 and above)
 - JQuery v1.9.1  (availabilaty - module v2.4 and above)  
 - JQuery v1.8.2  (availabilaty - module v2.0 and above)
@@ -22,6 +23,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
 - **2013-10-31** -- Module v2.5 released for Lift 2.5, 2.6, 3.0 
 - **2013-08-31** -- Module v2.5-SNAPSHOT Adding JQuery v1.10.2
 - **2013-05-13** -- Module v2.4-SNAPSHOT for Lift 2.6
@@ -29,6 +31,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-19** -- Module v2.4-SNAPSHOT Added JQuery v1.9.1
 
 **Latest snapshot Release:**
+- **2014-02-20** -- Module v2.6-SNAPSHOT published for Lift 2.5, 2.6, 3.0
 - **2013-05-13** -- Module v2.5-SNAPSHOT published for Lift 2.6/3.0
 - **2013-05-13** -- Module v2.4-SNAPSHOT published for Lift 2.6
 - **2013-04-25** -- Module v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
