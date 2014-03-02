@@ -24,6 +24,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-03-02** -- Module v2.6 released for Lift 2.5, 2.6, 3.0
 - **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
 - **2013-10-31** -- Module v2.5 released for Lift 2.5, 2.6, 3.0 
 - **2013-08-31** -- Module v2.5-SNAPSHOT Adding JQuery v1.10.2
@@ -92,7 +93,7 @@ Add
 
     import net.liftmodules.JQueryModule
     :
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
     JQueryModule.init()
 
 
