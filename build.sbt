@@ -2,9 +2,9 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "2.6-SNAPSHOT"
+version in ThisBuild := "2.6"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC6"
+liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
