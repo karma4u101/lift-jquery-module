@@ -2,7 +2,7 @@ name := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "2.6"
+version in ThisBuild := "2.7-SNAPSHOT"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
 
