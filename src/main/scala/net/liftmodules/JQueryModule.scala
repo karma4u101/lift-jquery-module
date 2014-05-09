@@ -49,6 +49,23 @@ package object JQueryModule {
     var JQuery: JQModule = _
   }
 
+  
+  /**
+   * Enable usage of JQuery version 2.1.z in your bootstrap liftweb Boot.
+   * @version 2.1.z
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery21Z
+   * }}}
+   * @since v2.7
+   */
+  case object JQuery21Z extends JQModule {
+    ModuleResources.jquery211
+  }
+  
   /**
    * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
    * @version 2.1.1
@@ -64,6 +81,21 @@ package object JQueryModule {
   case object JQuery211 extends JQModule {
     ModuleResources.jquery211
   }
+  
+   /**
+   * Enable usage of JQuery version 1.11.z in your bootstrap liftweb Boot.
+   * @version 1.11.z
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery111Z
+   * }}}
+   * @since v2.7
+   */
+  case object JQuery111Z extends JQModule {
+    ModuleResources.jquery1111
+  } 
   
   /**
    * Enable usage of JQuery version 1.11.1 in your bootstrap liftweb Boot.

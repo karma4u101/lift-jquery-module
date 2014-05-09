@@ -37,6 +37,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-05-09** -- Module v2.7-SNAPSHOT Introducing a new init parameter option with automatic incremental numbering see below.
 - **2014-05-09** -- Module v2.7-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
 - **2014-03-02** -- Module v2.6 released for Lift 2.5, 2.6, 3.0
 - **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
@@ -99,8 +100,17 @@ Add
 
     import net.liftmodules.JQueryModule
     :
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1111 
     JQueryModule.init()
+
+or 
+
+    import net.liftmodules.JQueryModule
+    :
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery111Z 
+    JQueryModule.init()
+
+The first one will initiate jquery version 1.11.1 the second one JQuery111Z will initiate version 1.11.z where z=[0,1,2,....] that automatical will give you the latest bugfix (incremental number) updates in the same major, minor series i.e gerneraly specifying JQuery[major][minor]Z can be used to point to the latest included bugfix release of a selected serie.  
 
 
 In Lift template
