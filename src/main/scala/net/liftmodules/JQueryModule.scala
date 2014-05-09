@@ -46,11 +46,42 @@ package object JQueryModule {
    * }}}
    */
   object InitParam extends JQModule {
-    var JQuery: JQModule = JQuery182
+    var JQuery: JQModule = _
   }
 
   /**
-   * Enable usage of JQuery version 1_11_0 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
+   * @version 2.1.1
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery211
+   * }}}
+   * @since v2.7
+   */
+  case object JQuery211 extends JQModule {
+    ModuleResources.jquery211
+  }
+  
+  /**
+   * Enable usage of JQuery version 1.11.1 in your bootstrap liftweb Boot.
+   * @version 1.11.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1111
+   * }}}
+   * @since v2.7
+   */
+  case object JQuery1111 extends JQModule {
+    ModuleResources.jquery1111
+  }
+  
+  /**
+   * Enable usage of JQuery version 1.11.0 in your bootstrap liftweb Boot.
    * @version 1.11.0
    *
    * '''Example:'''
@@ -59,11 +90,12 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
    * }}}
    */
+  @deprecated("Use v1.11.1 or later","Sins v2.7")
   case object JQuery1110 extends JQModule {
     ModuleResources.jquery1110
   }
   /**
-   * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.10.2 in your bootstrap liftweb Boot.
    * @version 1.10.2
    *
    * '''Example:'''
@@ -77,7 +109,7 @@ package object JQueryModule {
   }
   
   /**
-   * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.9.1 in your bootstrap liftweb Boot.
    * @version 1.9.1
    *
    * '''Example:'''
@@ -91,7 +123,7 @@ package object JQueryModule {
   }
 
   /**
-   * Enable usage of JQuery version 1_8_2 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.8.2 in your bootstrap liftweb Boot.
    * @version 1.8.2
    *
    * '''Example:'''
@@ -105,7 +137,7 @@ package object JQueryModule {
   }
 
   /**
-   * Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.7.2 in your bootstrap liftweb Boot.
    * @version 1.7.2
    *
    * '''Example:'''
@@ -119,7 +151,7 @@ package object JQueryModule {
   }
 
   /**
-   * Enable usage of JQuery version 1_7_1 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.7.1 in your bootstrap liftweb Boot.
    * @version 1.7.1
    *
    * '''Example:'''
@@ -128,12 +160,13 @@ package object JQueryModule {
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
    * }}}
    */
+  @deprecated("Use v1.7.2 or later","Sins v2.7")
   case object JQuery171 extends JQModule {
     ModuleResources.jquery171
   }
 
   /**
-   * Enable usage of JQuery version 1_6_4 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 1.6.4 in your bootstrap liftweb Boot.
    *
    * @version 1.6.4
    *
@@ -152,6 +185,20 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery211 = {
+      ResourceServer.rewrite {
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.1", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "2.1.1", "js", "jquery-min.js")
+      }
+    }
+    
+    lazy val jquery1111 = {
+      ResourceServer.rewrite {
+        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.1", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.11.1", "js", "jquery-min.js")
+      }
+    }
+    
     lazy val jquery1110 = {
       ResourceServer.rewrite {
         case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.0", "js", "jquery.js")

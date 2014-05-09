@@ -45,17 +45,17 @@ libraryDependencies <++= scalaVersion { sv =>
 
 //################################################################
 //#### THE YUI COMPRESSION BUILD
-//## 
-//##  
-//## 
+//##  2014-05-09 Turning of yui compression and switching to use 
+//##  provided compressed files as this plugin has not been updated
+//##  for use with sbt 0.13 
 //################################################################
-seq(yuiSettings: _*)
+//seq(yuiSettings: _*)
 
-excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" 
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" 
 
-excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
 
-YuiCompressorKeys.minSuffix := "-min"
+//YuiCompressorKeys.minSuffix := "-min"
 
 //################################################################
 //#### Publish to sonatype org

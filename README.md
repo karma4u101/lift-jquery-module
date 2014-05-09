@@ -3,14 +3,27 @@ lift-jquery-module [![Build Status](https://secure.travis-ci.org/karma4u101/lift
 
 A Lift JQuery Module currently supporting 
 
-- JQuery v1.11.0 (availabilaty - module v2.6 and above)
+- JQuery v2.1.1  (availabilaty - module v2.7 and above) Does not support Internet Explorer 6, 7, or 8
+- JQuery v1.11.1 (availabilaty - module v2.7 and above)
+- JQuery v1.11.0 (availabilaty - module v2.6 and above) Depricated sins v2.7 will be removed in v2.9 use v1.11.1+
 - JQuery v1.10.2 (availabilaty - module v2.5 and above)
 - JQuery v1.9.1  (availabilaty - module v2.4 and above)  
 - JQuery v1.8.2  (availabilaty - module v2.0 and above)
 - JQuery v1.7.2  (availabilaty - module v2.0 and above)
-- JQuery v1.7.1  (availabilaty - module v2.0 and above)
+- JQuery v1.7.1  (availabilaty - module v2.0 and above) Depricated sins v2.7 will be removed in v2.9 use v1.7.2+
 - JQuery v1.6.4  (availabilaty - module v2.0 and above)
 
+Usage Benefits
+--------------
+
+As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
+
+**Usage Benefits:** 
+- Very Smooth up/down-grade (a one-liner change in your Boot.scala and module version bump in your build file). 
+- The intention of this module is to closely follow the upstream releases.
+- Compile from same source the module will automatically give you minified files in production.
+ 
+If you have a update request you can either make a pull request or make a update request in a issue report. 
 
 Update log
 ----------
@@ -24,6 +37,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-05-09** -- Module v2.7-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
 - **2014-03-02** -- Module v2.6 released for Lift 2.5, 2.6, 3.0
 - **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
 - **2013-10-31** -- Module v2.5 released for Lift 2.5, 2.6, 3.0 
@@ -33,20 +47,12 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-19** -- Module v2.4-SNAPSHOT Added JQuery v1.9.1
 
 **Latest snapshot Release:**
+- **2014-05-09** -- Module v2.7-SNAPSHOT published for Lift 2.5, 2.6, 3.0
 - **2014-02-20** -- Module v2.6-SNAPSHOT published for Lift 2.5, 2.6, 3.0
 - **2013-05-13** -- Module v2.5-SNAPSHOT published for Lift 2.6/3.0
 - **2013-05-13** -- Module v2.4-SNAPSHOT published for Lift 2.6
 - **2013-04-25** -- Module v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
 - **2013-04-06** -- Module v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
-
-As this is a *very simple* and one *purpose only* Lift Module you may wonder why you should use it, so here we go 
-
-**Usage Benefits:** 
-- Very Smooth up/down-grade (a one-liner change in your Boot.scala and module version bump in your build file). 
-- The intention of this module is to closely follow the upstream releases.
-- Compile from same source the module will automatically give you minified files in production.
- 
-If you have a update request you can either make a pull request or make a update request in a issue report. 
 
 Integration into your project 
 -------------------------------
@@ -103,11 +109,6 @@ In Lift template
 Add 
 
     <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
-
-Usage example
--------------
-
-For a usage example take a look att my [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)
 
 ### History log
 ----------------
