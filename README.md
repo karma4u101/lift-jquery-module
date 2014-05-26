@@ -31,12 +31,14 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest Stable Releases:**
+- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
 - **2014-03-02** -- Module v2.6 artifact released for Lift 2.5, 2.6, 3.0
 - **2013-10-31** -- Module v2.5 artifact released for Lift 2.5, 2.6, 3.0
 - **2013-04-27** -- Module v2.4 releas artifact released for Lift 2.5
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
 - **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
 - **2014-05-09** -- Module v2.7-SNAPSHOT Introducing a new init parameter option with automatic incremental numbering see below.
 - **2014-05-09** -- Module v2.7-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
