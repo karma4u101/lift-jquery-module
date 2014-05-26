@@ -1,0 +1,15 @@
+alias pub=publish-local-signed
+
+set version      in ThisBuild:="2.8-SNAPSHOT"
+
+set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
+set scalaVersion in ThisBuild:="2.10.4"
+
+project Lift-JQuery-Module
+clean
+update
+compile
+test
+pub
+
+
