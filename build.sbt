@@ -1,4 +1,4 @@
-name := "Lift-JQuery-Module"
+moduleName := "Lift-JQuery-Module"
 
 organization := "net.liftmodules"
 
@@ -8,7 +8,7 @@ liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
-name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 scalaVersion  in ThisBuild := "2.10.0"
 
@@ -33,10 +33,12 @@ libraryDependencies <++= scalaVersion { sv =>
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" :: 
   (sv match {
-      case  "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.11.0"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
+      case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
       }) ::
    (sv match {
+      case "2.11.0"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
       case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       }) ::
