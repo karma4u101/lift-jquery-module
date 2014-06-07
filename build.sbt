@@ -1,4 +1,4 @@
-moduleName := "Lift-JQuery-Module"
+moduleName := "lift-jquery-module"
 
 organization := "net.liftmodules"
 
