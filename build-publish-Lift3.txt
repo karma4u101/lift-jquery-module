@@ -2,14 +2,15 @@ alias pub=publish-local-signed
 
 set version      in ThisBuild:="2.8-SNAPSHOT"
 
+set scalacOptions in ThisBuild += "-target:jvm-1.7"
+set javacOptions in ThisBuild ++= Seq("-source", "1.7", "-target", "1.7")
+
 set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
 set scalaVersion in ThisBuild:="2.10.4"
 
 project Lift-JQuery-Module
+set parallelExecution in Test := false
 clean
-update
-compile
-test
-pub
+; compile ; test ; pub
 
 

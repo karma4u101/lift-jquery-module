@@ -38,6 +38,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 
 **Latest updates**
+- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
 - **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
 - **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
 - **2014-05-09** -- Module v2.7-SNAPSHOT Introducing a new init parameter option with automatic incremental numbering see below.
@@ -51,6 +52,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2013-04-19** -- Module v2.4-SNAPSHOT Added JQuery v1.9.1
 
 **Latest snapshot Release:**
+- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
 - **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
 - **2014-05-09** -- Module v2.7-SNAPSHOT published for Lift 2.5, 2.6, 3.0
 - **2014-02-20** -- Module v2.6-SNAPSHOT published for Lift 2.5, 2.6, 3.0
