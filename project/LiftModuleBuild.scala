@@ -7,6 +7,6 @@ object LiftModuleBuild extends Build {
   
   val liftEdition = SettingKey[String]("liftEdition", "Lift Edition (short version number to append to artifact name)")
   
-  val project = Project("Lift-JQuery-Module", file("."))
+  val project = Project("lift-jquery-module", file("."))
 
 }
