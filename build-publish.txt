@@ -1,93 +1,36 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version      in ThisBuild:="2.8-SNAPSHOT"
 
-set scalacOptions += "-target:jvm-1.6"
-set javacOptions ++= Seq("-source", "1.6", "-target", "1.6")
-
-set liftVersion  in ThisBuild:="2.6-SNAPSHOT"
-set scalaVersion in ThisBuild:="2.11.0"
-
-project Lift-JQuery-Module
-clean
-update
-compile
-test
-pub
-
-
-set scalaVersion in ThisBuild:="2.10.0"
-
-project Lift-JQuery-Module
-clean
-update
-compile
-test
-pub
-
-set scalaVersion in ThisBuild:="2.9.2"
-
-project Lift-JQuery-Module
-clean
-update
-compile
-test
-pub
-
-set scalaVersion in ThisBuild:="2.9.1-1"
-
-project Lift-JQuery-Module
-clean
-update
-compile
-test
-pub
-
-
-set scalaVersion in ThisBuild:="2.9.1"
-
-project Lift-JQuery-Module
-clean
-update
-compile
-test
-pub
-
+set scalacOptions += "-target:jvm-1.5"
+set javacOptions ++= Seq("-source", "1.5", "-target", "1.5")
 
 set liftVersion  in ThisBuild:="2.5"
 set scalaVersion in ThisBuild:="2.10.0"
 
-project Lift-JQuery-Module
+project lift-jquery-module
 clean
 update
-compile
-test
-pub
+; compile ; test ; pub
 
 set scalaVersion in ThisBuild:="2.9.2"
 
-project Lift-JQuery-Module
+project lift-jquery-module
 clean
 update
-compile
-test
-pub
+; compile ; test ; pub
 
 set scalaVersion in ThisBuild:="2.9.1-1"
 
-project Lift-JQuery-Module
+project lift-jquery-module
 clean
 update
-compile
-test
-pub
+; compile ; test ; pub
 
 set scalaVersion in ThisBuild:="2.9.1"
 
-project Lift-JQuery-Module
+project lift-jquery-module
 clean
 update
-compile
-test
-pub
+; compile ; test ; pub
 

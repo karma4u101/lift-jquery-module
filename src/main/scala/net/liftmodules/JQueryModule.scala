@@ -27,7 +27,7 @@ package object JQueryModule {
 
   abstract trait JQModule
   /**
-   * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
+   * Enable JQuery options in your bootstrap liftweb Boot
    *
    * '''Example:''
    *
@@ -49,6 +49,20 @@ package object JQueryModule {
     var JQuery: JQModule = _
   }
 
+  /**
+   * Enable usage of JQuery-migrate version 1.2.1 in your bootstrap liftweb Boot.
+   * @version 1.2.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121
+   * }}}
+   * @since v2.7
+   */
+  case object JQueryMigrate121 extends JQModule {
+    ModuleResources.jqueryMigrate121
+  }  
   
   /**
    * Enable usage of JQuery version 2.1.z in your bootstrap liftweb Boot.
@@ -217,6 +231,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jqueryMigrate121 = {
+      ResourceServer.rewrite {
+        case "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")
+        case "jquery-migrate.js" :: Nil => List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+      }
+    }
+    
     lazy val jquery211 = {
       ResourceServer.rewrite {
         case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.1", "js", "jquery.js")

@@ -1,4 +1,4 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version      in ThisBuild:="2.8-SNAPSHOT"
 
@@ -8,7 +8,7 @@ set javacOptions in ThisBuild ++= Seq("-source", "1.7", "-target", "1.7")
 set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
 set scalaVersion in ThisBuild:="2.10.4"
 
-project Lift-JQuery-Module
+project lift-jquery-module
 set parallelExecution in Test := false
 clean
 ; compile ; test ; pub
