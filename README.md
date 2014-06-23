@@ -15,7 +15,7 @@ A Lift JQuery Module currently supporting
 
 Also supporting 
 
-- JQuery-Migrate v1.2.1 (availabilaty - module v2.8 and above) see https://github.com/jquery/jquery-migrate/
+- JQuery-Migrate v1.2.1 (availabilaty - module v2.8 and above) see [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 JQuery-Migrate is usefull for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring 
 APIs or features that have been deprecated in jQuery
