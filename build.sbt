@@ -19,8 +19,8 @@ crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 logLevel := Level.Info  
 
 resolvers ++= Seq(
-  "CB Central Mirror" at "http://repo.cloudbees.com/content/groups/public",
-  "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
+  "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
+  "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
 libraryDependencies <++= liftVersion { v =>
@@ -33,12 +33,12 @@ libraryDependencies <++= scalaVersion { sv =>
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" :: 
   (sv match {
-      case "2.11.0"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
+      case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
       case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
       }) ::
    (sv match {
-      case "2.11.0"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case "2.11.1"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
       case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       }) ::

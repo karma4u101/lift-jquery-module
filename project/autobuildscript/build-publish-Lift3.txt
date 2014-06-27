@@ -1,12 +1,12 @@
 alias pub=publish-signed
 
-set version      in ThisBuild:="2.8-SNAPSHOT"
+set version      in ThisBuild:="2.8"
 
 set scalacOptions in ThisBuild += "-target:jvm-1.7"
 set javacOptions in ThisBuild ++= Seq("-source", "1.7", "-target", "1.7")
 
-set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
-set scalaVersion in ThisBuild:="2.10.4"
+set liftVersion  in ThisBuild:="3.0-M1"
+set scalaVersion in ThisBuild:="2.10.0"
 
 project lift-jquery-module
 set parallelExecution in Test := false

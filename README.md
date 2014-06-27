@@ -17,7 +17,7 @@ Also supporting
 
 - JQuery-Migrate v1.2.1 (availabilaty - module v2.8 and above) see [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
-JQuery-Migrate is usefull for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring 
+JQuery-Migrate is useful for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring 
 APIs or features that have been deprecated in jQuery
 
 Usage Benefits
@@ -38,37 +38,14 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest Stable Releases:**
-- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
-- **2014-03-02** -- Module v2.6 artifact released for Lift 2.5, 2.6, 3.0
-- **2013-10-31** -- Module v2.5 artifact released for Lift 2.5, 2.6, 3.0
-- **2013-04-27** -- Module v2.4 releas artifact released for Lift 2.5
-- **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
+- **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6, 3.0-M1
 
 **Latest updates**
+- **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6
 - **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0 adding jquery-migrate v1.2.1
-- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
-- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
-- **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
-- **2014-05-09** -- Module v2.7-SNAPSHOT Introducing a new init parameter option with automatic incremental numbering see below.
-- **2014-05-09** -- Module v2.7-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
-- **2014-03-02** -- Module v2.6 released for Lift 2.5, 2.6, 3.0
-- **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
-- **2013-10-31** -- Module v2.5 released for Lift 2.5, 2.6, 3.0 
-- **2013-08-31** -- Module v2.5-SNAPSHOT Adding JQuery v1.10.2
-- **2013-05-13** -- Module v2.4-SNAPSHOT for Lift 2.6
-- **2013-04-27** -- Module v2.4 releas for Lift 2.5
-- **2013-04-19** -- Module v2.4-SNAPSHOT Added JQuery v1.9.1
+
 
 **Latest snapshot Release:**
-- **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0
-- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
-- **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
-- **2014-05-09** -- Module v2.7-SNAPSHOT published for Lift 2.5, 2.6, 3.0
-- **2014-02-20** -- Module v2.6-SNAPSHOT published for Lift 2.5, 2.6, 3.0
-- **2013-05-13** -- Module v2.5-SNAPSHOT published for Lift 2.6/3.0
-- **2013-05-13** -- Module v2.4-SNAPSHOT published for Lift 2.6
-- **2013-04-25** -- Module v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
-- **2013-04-06** -- Module v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 
 Integration into your project 
 -------------------------------
@@ -139,6 +116,18 @@ Add
 ----------------
 
 **Update history:**
+- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
+- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
+- **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
+- **2014-05-09** -- Module v2.7-SNAPSHOT Introducing a new init parameter option with automatic incremental numbering see below.
+- **2014-05-09** -- Module v2.7-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
+- **2014-03-02** -- Module v2.6 released for Lift 2.5, 2.6, 3.0
+- **2014-02-20** -- Module v2.6-SNAPSHOT Adding JQuery v1.11.0 
+- **2013-10-31** -- Module v2.5 released for Lift 2.5, 2.6, 3.0 
+- **2013-08-31** -- Module v2.5-SNAPSHOT Adding JQuery v1.10.2
+- **2013-05-13** -- Module v2.4-SNAPSHOT for Lift 2.6
+- **2013-04-27** -- Module v2.4 releas for Lift 2.5
+- **2013-04-19** -- Module v2.4-SNAPSHOT Added JQuery v1.9.1
 - **2013-04-06** -- v2.3 build for Lift v2.5 (using Lift RC4). New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information
 - **2013-04-06** -- v2.3 Stable build for Lift RC4. Classic version schema
 - **2013-01-22** -- v2.2 Stable build for Lift RC1
@@ -151,6 +140,11 @@ Add
 - **2012-11-03** -- v2.0-SNAPSHOT - Added JQuery v1.8.2 
 
 **Stable releas history:**
+- **2014-05-26** -- Module v2.7 artifact released for Lift 2.5, 2.6
+- **2014-03-02** -- Module v2.6 artifact released for Lift 2.5, 2.6, 3.0
+- **2013-10-31** -- Module v2.5 artifact released for Lift 2.5, 2.6, 3.0
+- **2013-04-27** -- Module v2.4 releas artifact released for Lift 2.5
+- **2013-04-06** -- Module v2.3 stable artifact released for Lift 2.5 (new version schema)
 - **2013-04-06** -- v2.3 stable artifact released for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-01-22** -- v2.2 stable artifact released for Lift 2.5-RC1 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-01-11** -- v2.1 stable artifact released for Lift 2.5-M4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 )
@@ -160,6 +154,15 @@ Add
 
 
 **Snapshot Release history:**
+- **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0
+- **2014-06-07** -- Module v2.7 Scala 2.11 artifact released for Lift v2.6 
+- **2014-05-24** -- Module v2.7-M1 artifact released for Lift 3.0-M1
+- **2014-05-09** -- Module v2.7-SNAPSHOT published for Lift 2.5, 2.6, 3.0
+- **2014-02-20** -- Module v2.6-SNAPSHOT published for Lift 2.5, 2.6, 3.0
+- **2013-05-13** -- Module v2.5-SNAPSHOT published for Lift 2.6/3.0
+- **2013-05-13** -- Module v2.4-SNAPSHOT published for Lift 2.6
+- **2013-04-25** -- Module v2.4-SNAPSHOT published for Lift 2.5/3.0 (new version schema)
+- **2013-04-06** -- Module v2.3-SNAPSHOT published for Lift 2.5-RC4 (Scala 2.10.0, 2.9.2, 2.9.1-1, 2.9.1 ) 
 - **2013-02-15** -- v2.2-SNAPSHOT published for Lift 3.0-SNAPSHOT / Scala 2.10
 - **2013-01-10** -- v2.1-SNAPSHOT published for Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-11** -- v2.0-SNAPSHOT published for Lift-2.5-M3 and Lift 2.5-SNAPSHOT
