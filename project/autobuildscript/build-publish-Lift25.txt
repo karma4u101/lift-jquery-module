@@ -1,6 +1,6 @@
-alias pub=publish-signed
+alias pub=publish-local-signed
 
-set version      in ThisBuild:="2.8"
+set version      in ThisBuild:="2.9-SNAPSHOT"
 
 set scalacOptions += "-target:jvm-1.5"
 set javacOptions ++= Seq("-source", "1.5", "-target", "1.5")

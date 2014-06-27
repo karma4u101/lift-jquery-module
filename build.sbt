@@ -10,11 +10,11 @@ liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-scalaVersion  in ThisBuild := "2.10.0"
+scalaVersion  in ThisBuild := "2.10.4"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
-crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 logLevel := Level.Info  
 
@@ -34,12 +34,12 @@ libraryDependencies <++= scalaVersion { sv =>
   "log4j" % "log4j" % "1.2.16" % "provided" :: 
   (sv match {
       case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
-      case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
       }) ::
    (sv match {
       case "2.11.1"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
-      case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case "2.10.4" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       }) ::
   Nil
