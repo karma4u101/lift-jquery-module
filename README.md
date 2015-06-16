@@ -3,6 +3,8 @@ lift-jquery-module [![Build Status](https://secure.travis-ci.org/karma4u101/lift
 
 A Lift JQuery Module currently supporting 
 
+- JQuery v1.11.3 (availabilaty - module v2.9 and above)
+- JQuery v2.1.4  (availabilaty - module v2.9 and above)
 - JQuery v2.1.1  (availabilaty - module v2.7 and above) Does not support Internet Explorer 6, 7, or 8
 - JQuery v1.11.1 (availabilaty - module v2.7 and above)
 - JQuery v1.11.0 (availabilaty - module v2.6 and above) Depricated sins v2.7 will be removed in v2.9 use v1.11.1+
