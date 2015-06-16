@@ -41,6 +41,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6, 3.0-M1
 
 **Latest updates**
+- **2015-06-16** -- Module v2.9-SNAPSHOT Added jquery v1.11.3 and v2.1.4
 - **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6
 - **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0 adding jquery-migrate v1.2.1
 
