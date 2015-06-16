@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 version in ThisBuild := "2.9-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "2.6.2"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -14,7 +14,7 @@ scalaVersion  in ThisBuild := "2.10.4"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
-crossScalaVersions := Seq("2.11.2", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 logLevel := Level.Info  
 
