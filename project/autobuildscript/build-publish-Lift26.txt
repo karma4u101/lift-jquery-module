@@ -1,13 +1,10 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version      in ThisBuild:="2.9-SNAPSHOT"
 
-set scalacOptions += "-target:jvm-1.5"
-set javacOptions ++= Seq("-source", "1.5", "-target", "1.5")
+set liftVersion  in ThisBuild:="2.6.2"
 
-set liftVersion  in ThisBuild:="2.6-M4"
-
-set scalaVersion in ThisBuild:="2.11.1"
+set scalaVersion in ThisBuild:="2.11.2"
 
 project lift-jquery-module
 set parallelExecution in Test := false
@@ -15,7 +12,7 @@ clean
 clean-files
 ; compile ; test ; pub
 
-set scalaVersion in ThisBuild:="2.10.0"
+set scalaVersion  in ThisBuild:="2.10.4"
 
 project lift-jquery-module
 set parallelExecution in Test := false
@@ -39,7 +36,6 @@ clean
 clean-files
 ; compile ; test ; pub
 
-
 set scalaVersion in ThisBuild:="2.9.1"
 
 project lift-jquery-module
@@ -47,5 +43,4 @@ set parallelExecution in Test := false
 clean
 clean-files
 ; compile ; test ; pub
-
 

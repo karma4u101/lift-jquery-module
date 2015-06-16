@@ -11,9 +11,15 @@ object JQueryModuleSpec extends Specification  {
   "JQueryModuleSpec Specification".title
 
   "With JQueryModule.InitParam.JQuery the ResourceServer.pathRewriter" should {
+    "having the initparam set to JQuery214 rewrit jquery.js to jquery/2.1.4/js/jquery-min.js" in {
+      rewriteJQuery214JS must_== List("jquery", "2.1.4", "js", "jquery-min.js")
+    }    
     "having the initparam set to JQuery211 rewrit jquery.js to jquery/2.1.1/js/jquery-min.js" in {
       rewriteJQuery211JS must_== List("jquery", "2.1.1", "js", "jquery-min.js")
     }
+    "having the initparam set to JQuery1113 rewrit jquery.js to jquery/1.11.3/js/jquery-min.js" in {
+      rewriteJQuery1113JS must_== List("jquery", "1.11.3", "js", "jquery-min.js")
+    }    
     "having the initparam set to JQuery1111 rewrit jquery.js to jquery/1.11.1/js/jquery-min.js" in {
       rewriteJQuery1111JS must_== List("jquery", "1.11.1", "js", "jquery-min.js")
     }
@@ -124,8 +130,18 @@ object JQueryModuleSpec extends Specification  {
     ResourceServer.pathRewriter("jquery-migrate.js"::Nil)    
   }
   
+  def rewriteJQuery214JS = {
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery214
+    ResourceServer.pathRewriter("jquery.js"::Nil)
+  }
+  
   def rewriteJQuery211JS = {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery211
+    ResourceServer.pathRewriter("jquery.js"::Nil)
+  }
+  
+  def rewriteJQuery1113JS = {
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1113
     ResourceServer.pathRewriter("jquery.js"::Nil)
   }
   

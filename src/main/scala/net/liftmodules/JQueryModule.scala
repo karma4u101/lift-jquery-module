@@ -77,10 +77,26 @@ package object JQueryModule {
    * @since v2.7
    */
   case object JQuery21Z extends JQModule {
-    ModuleResources.jquery211
+    ModuleResources.jquery214
   }
   
   /**
+   * Enable usage of JQuery version 2.1.4 in your bootstrap liftweb Boot.
+   * @version 2.1.4
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery214
+   * }}}
+   * @since v2.9
+   */
+  case object JQuery214 extends JQModule {
+    ModuleResources.jquery214
+  }
+  
+   /**
    * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
    * @version 2.1.1
    * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
@@ -92,10 +108,10 @@ package object JQueryModule {
    * }}}
    * @since v2.7
    */
+  @deprecated("Use v2.1.4 or later","Sins v2.9")
   case object JQuery211 extends JQModule {
     ModuleResources.jquery211
   }
-  
    /**
    * Enable usage of JQuery version 1.11.z in your bootstrap liftweb Boot.
    * @version 1.11.z
@@ -108,8 +124,25 @@ package object JQueryModule {
    * @since v2.7
    */
   case object JQuery111Z extends JQModule {
-    ModuleResources.jquery1111
+    ModuleResources.jquery1113
   } 
+
+  /**
+   * Enable usage of JQuery version 1.11.3 in your bootstrap liftweb Boot.
+   * @version 1.11.3
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery2113
+   * }}}
+   * @since v2.9
+   */
+  case object JQuery1113 extends JQModule {
+    ModuleResources.jquery1113
+  }
+  
   
   /**
    * Enable usage of JQuery version 1.11.1 in your bootstrap liftweb Boot.
@@ -122,6 +155,7 @@ package object JQueryModule {
    * }}}
    * @since v2.7
    */
+  @deprecated("Use v1.11.3 or later","Sins v2.9")
   case object JQuery1111 extends JQModule {
     ModuleResources.jquery1111
   }
@@ -231,6 +265,22 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery214 = {
+      ResourceServer.rewrite {
+       case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.4", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "2.1.4", "js", "jquery-min.js")
+        case "jquery-min.map" :: Nil => List("jquery", "2.1.4", "js", "jquery-min.map")
+      }
+    }
+    
+    lazy val jquery1113 = {
+      ResourceServer.rewrite {
+       case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.3", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "1.11.3", "js", "jquery-min.js")
+        case "jquery-min.map" :: Nil => List("jquery", "1.11.3", "js", "jquery-min.map")
+      }
+    }
+    
     lazy val jqueryMigrate121 = {
       ResourceServer.rewrite {
         case "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")

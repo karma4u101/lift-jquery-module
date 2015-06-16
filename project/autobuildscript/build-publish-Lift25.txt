@@ -1,4 +1,4 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version      in ThisBuild:="2.9-SNAPSHOT"
 
@@ -6,7 +6,8 @@ set scalacOptions += "-target:jvm-1.5"
 set javacOptions ++= Seq("-source", "1.5", "-target", "1.5")
 
 set liftVersion  in ThisBuild:="2.5"
-set scalaVersion in ThisBuild:="2.10.0"
+
+set scalaVersion in ThisBuild:="2.10.4"
 
 project lift-jquery-module
 clean

@@ -46,6 +46,7 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 
 
 **Latest snapshot Release:**
+- **2015-06-16** -- Module v2.9-SNAPSHOT released for Lift v2.6 and v3.0
 
 Integration into your project 
 -------------------------------
