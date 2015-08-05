@@ -23,9 +23,6 @@ object JQueryModuleSpec extends Specification  {
     "having the initparam set to JQuery1111 rewrit jquery.js to jquery/1.11.1/js/jquery-min.js" in {
       rewriteJQuery1111JS must_== List("jquery", "1.11.1", "js", "jquery-min.js")
     }
-    "having the initparam set to JQuery1110 rewrit jquery.js to jquery/1.11.0/js/jquery-min.js" in {
-      rewriteJQuery1110JS must_== List("jquery", "1.11.0", "js", "jquery-min.js")
-    }
     "having the initparam set to JQuery1102 rewrit jquery.js to jquery/1.10.2/js/jquery-min.js" in {
       rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
     }     
@@ -37,10 +34,7 @@ object JQueryModuleSpec extends Specification  {
     } 
     "having the initparam set to JQuery172 rewrit jquery.js to jquery/1.7.2/js/jquery-min.js" in {
       rewriteJQuery172JS must_== List("jquery", "1.7.2", "js", "jquery-min.js")
-    } 
-    "having the initparam set to JQuery171 rewrit jquery.js to jquery/1.7.1/js/jquery-min.js" in {
-      rewriteJQuery171JS must_== List("jquery", "1.7.1", "js", "jquery-min.js")
-    }   
+    }    
     "having the initparam set to JQuery164 rewrit jquery.js to jquery/1.6.4/js/jquery-min.js" in {
       rewriteJQuery164JS must_== List("jquery", "1.6.4", "js", "jquery-min.js")
     }
@@ -149,11 +143,6 @@ object JQueryModuleSpec extends Specification  {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery1111
     ResourceServer.pathRewriter("jquery.js"::Nil)
   }
-  
-  def rewriteJQuery1110JS = {
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
-    ResourceServer.pathRewriter("jquery.js"::Nil)
-  }
 
   def rewriteJQuery1102JS = {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery1102
@@ -173,12 +162,7 @@ object JQueryModuleSpec extends Specification  {
   def rewriteJQuery172JS = {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
     ResourceServer.pathRewriter("jquery.js"::Nil)
-  }   
-  
-  def rewriteJQuery171JS = {
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
-    ResourceServer.pathRewriter("jquery.js"::Nil)
-  }   
+  }      
   
   def rewriteJQuery164JS = {
     JQueryModule.InitParam.JQuery=JQueryModule.JQuery164

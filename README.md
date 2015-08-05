@@ -7,12 +7,10 @@ A Lift JQuery Module currently supporting
 - JQuery v2.1.4  (availabilaty - module v2.9 and above)
 - JQuery v2.1.1  (availabilaty - module v2.7 and above) Does not support Internet Explorer 6, 7, or 8
 - JQuery v1.11.1 (availabilaty - module v2.7 and above)
-- JQuery v1.11.0 (availabilaty - module v2.6 and above) Depricated sins v2.7 will be removed in v2.9 use v1.11.1+
 - JQuery v1.10.2 (availabilaty - module v2.5 and above)
-- JQuery v1.9.1  (availabilaty - module v2.4 and above)  
+- JQuery v1.9.1  (availabilaty - module v2.4 and above) 
 - JQuery v1.8.2  (availabilaty - module v2.0 and above)
 - JQuery v1.7.2  (availabilaty - module v2.0 and above)
-- JQuery v1.7.1  (availabilaty - module v2.0 and above) Depricated sins v2.7 will be removed in v2.9 use v1.7.2+
 - JQuery v1.6.4  (availabilaty - module v2.0 and above)
 
 Also supporting 
@@ -40,9 +38,12 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest Stable Releases:**
+- **2015-08-XX** -- Module v2.9 artifact released for Lift 2.6.2 (Scala 2.11,2.10,2.9.2,2.9.1-1,2.9.1), 3.0-M6 (Scala 2.11)
 - **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6, 3.0-M1
 
 **Latest updates**
+- **2015-08-05** -- Module v2.9-SNAPSHOT released for Lift 2.6.2, 3.0-M6
+- **2015-08-05** -- Module v2.9-SNAPSHOT Removing long time deprications (v1.7.1,1.11.0)
 - **2015-06-16** -- Module v2.9-SNAPSHOT Added jquery v1.11.3 and v2.1.4
 - **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6
 - **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0 adding jquery-migrate v1.2.1
