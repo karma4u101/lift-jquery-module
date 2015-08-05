@@ -161,20 +161,6 @@ package object JQueryModule {
   }
   
   /**
-   * Enable usage of JQuery version 1.11.0 in your bootstrap liftweb Boot.
-   * @version 1.11.0
-   *
-   * '''Example:'''
-   *
-   * {{{
-   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery1110
-   * }}}
-   */
-  @deprecated("Use v1.11.1 or later","Sins v2.7")
-  case object JQuery1110 extends JQModule {
-    ModuleResources.jquery1110
-  }
-  /**
    * Enable usage of JQuery version 1.10.2 in your bootstrap liftweb Boot.
    * @version 1.10.2
    *
@@ -230,20 +216,6 @@ package object JQueryModule {
     ModuleResources.jquery172
   }
 
-  /**
-   * Enable usage of JQuery version 1.7.1 in your bootstrap liftweb Boot.
-   * @version 1.7.1
-   *
-   * '''Example:'''
-   *
-   * {{{
-   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery171
-   * }}}
-   */
-  @deprecated("Use v1.7.2 or later","Sins v2.7")
-  case object JQuery171 extends JQModule {
-    ModuleResources.jquery171
-  }
 
   /**
    * Enable usage of JQuery version 1.6.4 in your bootstrap liftweb Boot.
@@ -301,13 +273,6 @@ package object JQueryModule {
         case "jquery.js" :: Nil => List("jquery", "1.11.1", "js", "jquery-min.js")
       }
     }
-    
-    lazy val jquery1110 = {
-      ResourceServer.rewrite {
-        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.0", "js", "jquery.js")
-        case "jquery.js" :: Nil => List("jquery", "1.11.0", "js", "jquery-min.js")
-      }
-    }
 
     lazy val jquery1102 = {
       ResourceServer.rewrite {
@@ -334,13 +299,6 @@ package object JQueryModule {
       ResourceServer.rewrite {
         case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
         case "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
-      }
-    }
-
-    lazy val jquery171 = {
-      ResourceServer.rewrite {
-        case "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
-        case "jquery.js" :: Nil => List("jquery", "1.7.1", "js", "jquery-min.js")
       }
     }
 
