@@ -14,7 +14,7 @@ scalaVersion  in ThisBuild := "2.10.4"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
-crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 logLevel := Level.Info  
 
