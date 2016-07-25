@@ -1,5 +1,7 @@
-lift-jquery-module [![Build Status](https://secure.travis-ci.org/karma4u101/lift-jquery-module.png)](http://travis-ci.org/karma4u101/lift-jquery-module)
-==================
+# lift-jquery-module 
+[![Build Status](https://secure.travis-ci.org/karma4u101/lift-jquery-module.png)](http://travis-ci.org/karma4u101/lift-jquery-module)
+[![Stories in Ready](https://badge.waffle.io/karma4u101/lift-jquery-module.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/lift-jquery-module) 
+
 
 A Lift JQuery Module currently supporting 
 
