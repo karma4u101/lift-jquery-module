@@ -49,6 +49,21 @@ package object JQueryModule {
   }
 
   /**
+   * Enable usage of JQuery-migrate version 1.4.1 in your bootstrap liftweb Boot.
+   * @version 1.4.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate141
+   * }}}
+   * @since v2.10
+   */
+  case object JQueryMigrate141 extends JQModule {
+    ModuleResources.jqueryMigrate141
+  } 
+  
+  /**
    * Enable usage of JQuery-migrate version 3.0.0 in your bootstrap liftweb Boot.
    * @version 3.0.0
    *
@@ -62,6 +77,7 @@ package object JQueryModule {
   case object JQueryMigrate300 extends JQModule {
     ModuleResources.jqueryMigrate300
   }  
+  
   /**
    * Enable usage of JQuery version 2.2.4 in your bootstrap liftweb Boot.
    * @version 2.2.4
@@ -266,6 +282,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jqueryMigrate141 = {
+      ResourceServer.rewrite {
+        case "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "1.4.1", "js", "jquery-migrate.js")
+        case "jquery-migrate.js" :: Nil => List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+      }
+    }
+    
     lazy val jqueryMigrate300 = {
       ResourceServer.rewrite {
         case "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "3.0.0", "js", "jquery-migrate.js")

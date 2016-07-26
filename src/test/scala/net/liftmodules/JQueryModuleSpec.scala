@@ -11,7 +11,18 @@ object JQueryModuleSpec extends Specification  {
   "JQueryModuleSpec Specification".title
   
   sequential
- 
+
+    //JQueryMigrate141
+  "With JQueryModule.InitParam.JQuery set to JQueryModule.JQueryMigrate141 the ResourceServer" should {
+//    "allow jquery-migrate.js" in {
+//      allow(JQueryModule.JQueryMigrate141,"jquery-migrate.js"::Nil) must_== true 
+//    }
+    "rewrit jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
+      rewrite(JQueryModule.JQueryMigrate141,"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    }        
+  }
+  
     //JQueryMigrate300
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQueryMigrate300 the ResourceServer" should {
 //    "allow jquery-migrate.js" in {
