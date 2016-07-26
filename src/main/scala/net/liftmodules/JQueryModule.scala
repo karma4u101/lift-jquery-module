@@ -49,6 +49,20 @@ package object JQueryModule {
   }
 
   /**
+   * Enable usage of JQuery-migrate version 3.0.0 in your bootstrap liftweb Boot.
+   * @version 3.0.0
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate300
+   * }}}
+   * @since v2.10
+   */
+  case object JQueryMigrate300 extends JQModule {
+    ModuleResources.jqueryMigrate300
+  }  
+  /**
    * Enable usage of JQuery version 2.2.4 in your bootstrap liftweb Boot.
    * @version 2.2.4
    * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
@@ -252,6 +266,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jqueryMigrate300 = {
+      ResourceServer.rewrite {
+        case "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "3.0.0", "js", "jquery-migrate.js")
+        case "jquery-migrate.js" :: Nil => List("jquery-migrate", "3.0.0", "js", "jquery-migrate-min.js")
+      }
+    }
+    
     lazy val jquery224 = {
       ResourceServer.rewrite {
        case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.2.4", "js", "jquery.js")
