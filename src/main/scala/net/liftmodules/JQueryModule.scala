@@ -49,6 +49,22 @@ package object JQueryModule {
   }
 
   /**
+   * Enable usage of JQuery version 2.2.4 in your bootstrap liftweb Boot.
+   * @version 2.2.4
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery224
+   * }}}
+   * @since v2.10
+   */
+  case object JQuery224 extends JQModule {
+    ModuleResources.jquery224
+  }
+  
+  /**
    * Enable usage of JQuery-migrate version 1.2.1 in your bootstrap liftweb Boot.
    * @version 1.2.1
    *
@@ -236,6 +252,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery224 = {
+      ResourceServer.rewrite {
+       case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.2.4", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "2.2.4", "js", "jquery-min.js")
+      }
+    }
+    
     lazy val jquery214 = {
       ResourceServer.rewrite {
        case "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.4", "js", "jquery.js")

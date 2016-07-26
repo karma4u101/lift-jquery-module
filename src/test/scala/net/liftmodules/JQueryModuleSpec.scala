@@ -11,6 +11,17 @@ object JQueryModuleSpec extends Specification  {
   "JQueryModuleSpec Specification".title
   
   sequential
+ 
+    //JQuery224
+  "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery224 the ResourceServer" should {
+    "allow  jquery.js" in {
+      allow(JQueryModule.JQuery224,"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit jquery.js to jquery/2.2.4/js/jquery-min.js" in {
+      rewrite(JQueryModule.JQuery224,"jquery.js"::Nil) must_== 
+        List("jquery", "2.2.4", "js", "jquery-min.js")
+    }        
+  }
   
     //JQuery214
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery214 the ResourceServer" should {
