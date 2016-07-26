@@ -32,7 +32,6 @@ package object JQueryModule {
    * '''Example:''
    *
    * {{{
-   *   //init params can be skipped if it sets the current default value
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
    *   JQueryModule.init()
    * }}}
@@ -46,7 +45,7 @@ package object JQueryModule {
    * }}}
    */
   object InitParam extends JQModule {
-    var JQuery: JQModule = _
+    var JQuery: JQModule = null
   }
 
   /**

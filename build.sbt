@@ -4,17 +4,17 @@ organization := "net.liftmodules"
 
 version in ThisBuild := "2.10-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6.2"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC3"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-scalaVersion  in ThisBuild := "2.10.4"
+scalaVersion  in ThisBuild := "2.11.7"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
-crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.7", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 logLevel := Level.Info  
 
@@ -29,18 +29,33 @@ libraryDependencies <++= liftVersion { v =>
     Nil
 }
 
-libraryDependencies <++= scalaVersion { sv => 
-  (sv match {
-      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
-      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+libraryDependencies <++= (scalaVersion,liftVersion) { (sv,lv) => 
+  ((sv,lv) match {
+      case ("2.9.2",_) | ("2.9.1",_) | ("2.9.1-1",_) => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case ("2.10.4",_) => "org.specs2" %% "specs2" % "1.13" % "test"
+      case (_,"2.6.2") => "org.specs2" %% "specs2" % "2.3.11" % "test"
+      case (_,_) => "org.specs2" %% "specs2" % "3.7" % "test"
  }) ::
-    (sv match {
-      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+    ((sv,lv) match {
+      case ("2.10.4",_) | ("2.9.2",_) | ("2.9.1",_) | ("2.9.1-1",_) => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case (_,"2.6.2") => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case (_,_) => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
       }) ::
   Nil
 }
+
+//libraryDependencies <++= scalaVersion { sv => 
+//  (sv match {
+//      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+//      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
+//      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+// }) ::
+//    (sv match {
+//      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+//      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+//      }) ::
+//  Nil
+//}
 
 libraryDependencies ++= { 
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
