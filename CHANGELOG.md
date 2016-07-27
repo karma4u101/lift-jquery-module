@@ -8,4 +8,4 @@
 [Issue #20](https://github.com/karma4u101/lift-jquery-module/issues/20) Adding JQuery migrate v1.4.1
 [Issue #14](https://github.com/karma4u101/lift-jquery-module/issues/14) Adding JQuery 3.0.0 
 [Issue #12](https://github.com/karma4u101/lift-jquery-module/issues/12) Adding JQuery 3.1.0
-
+[Issue #24](https://github.com/karma4u101/lift-jquery-module/issues/24) Update/Add documentation
