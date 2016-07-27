@@ -12,6 +12,17 @@ object JQueryModuleSpec extends Specification  {
   
   sequential
 
+    //JQuery310
+  "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery310 the ResourceServer" should {
+    "allow  jquery.js" in {
+      allow(JQueryModule.JQuery310,"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit jquery.js to jquery/3.1.0/js/jquery-min.js" in {
+      rewrite(JQueryModule.JQuery310,"jquery.js"::Nil) must_== 
+        List("jquery", "3.1.0", "js", "jquery-min.js")
+    }        
+  } 
+  
     //JQuery300
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery300 the ResourceServer" should {
     "allow  jquery.js" in {
