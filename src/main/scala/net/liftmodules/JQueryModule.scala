@@ -49,6 +49,22 @@ package object JQueryModule {
   }
   
   /**
+   * Enable usage of JQuery version 3.1.0 in your bootstrap liftweb Boot.
+   * @version 3.1.0
+   * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery310
+   * }}}
+   * @since v2.10
+   */
+  case object JQuery310 extends JQModule {
+    ModuleResources.jquery310
+  }    
+  
+  /**
    * Enable usage of JQuery version 3.0.0 in your bootstrap liftweb Boot.
    * @version 3.0.0
    * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
@@ -298,6 +314,13 @@ package object JQueryModule {
    */
   private object ModuleResources {
 
+    lazy val jquery310 = {
+      ResourceServer.rewrite {
+       case "jquery.js" :: Nil if Props.devMode => List("jquery", "3.1.0", "js", "jquery.js")
+        case "jquery.js" :: Nil => List("jquery", "3.1.0", "js", "jquery-min.js")
+      }
+    }
+    
     lazy val jquery300 = {
       ResourceServer.rewrite {
        case "jquery.js" :: Nil if Props.devMode => List("jquery", "3.0.0", "js", "jquery.js")
