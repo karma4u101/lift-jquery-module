@@ -48,18 +48,6 @@ For update history see the [History log](https://github.com/karma4u101/lift-jque
 - **2015-08-08** -- Module v2.9 artifact released for Lift 2.6.2 (Scala 2.11,2.10,2.9.2,2.9.1-1,2.9.1), 3.0-M6 (Scala 2.11)
 - **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6, 3.0-M1
 
-**Latest updates**
-- **2015-08-08** -- Module v2.9 released for Lift 2.6.2, 3.0-M6
-- **2015-08-05** -- Module v2.9-SNAPSHOT released for Lift 2.6.2, 3.0-M6
-- **2015-08-05** -- Module v2.9-SNAPSHOT Removing long time deprications (v1.7.1,1.11.0)
-- **2015-06-16** -- Module v2.9-SNAPSHOT Added jquery v1.11.3 and v2.1.4
-- **2014-06-27** -- Module v2.8 artifact released for Lift 2.5, 2.6
-- **2014-06-21** -- Module v2.8-SNAPSHOT released for Lift v2.5, v2.6 and v3.0 adding jquery-migrate v1.2.1
-
-
-**Latest snapshot Release:**
-- **2015-06-16** -- Module v2.9-SNAPSHOT released for Lift v2.6 and v3.0
-
 Integration into your project 
 -------------------------------
 
