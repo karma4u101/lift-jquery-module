@@ -12,6 +12,16 @@ object JQueryModuleSpec extends Specification  {
   
   sequential
 
+    //JQuery300
+  "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery300 the ResourceServer" should {
+    "allow  jquery.js" in {
+      allow(JQueryModule.JQuery300,"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit jquery.js to jquery/3.0.0/js/jquery-min.js" in {
+      rewrite(JQueryModule.JQuery300,"jquery.js"::Nil) must_== 
+        List("jquery", "3.0.0", "js", "jquery-min.js")
+    }        
+  }  
     //JQueryMigrate141
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQueryMigrate141 the ResourceServer" should {
 //    "allow jquery-migrate.js" in {
@@ -33,6 +43,7 @@ object JQueryModuleSpec extends Specification  {
         List("jquery-migrate", "3.0.0", "js", "jquery-migrate-min.js")
     }        
   }  
+  
     //JQuery224
   "With JQueryModule.InitParam.JQuery set to JQueryModule.JQuery224 the ResourceServer" should {
     "allow  jquery.js" in {
