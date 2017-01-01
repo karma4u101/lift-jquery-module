@@ -1,5 +1,9 @@
 # Changelog
 
+## lift-jquery-module v2.11 
+
+Snapshot release for Lift v3.1-SNAPSHOT 
+
 ## lift-jquery-module v2.10
 
 [Issue #16](https://github.com/karma4u101/lift-jquery-module/issues/16) Improving the tests

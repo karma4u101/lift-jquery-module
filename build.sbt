@@ -2,15 +2,15 @@ moduleName := "lift-jquery-module"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "2.10"
+version in ThisBuild := "2.11-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC3"
+liftVersion in ThisBuild <<= liftVersion ?? "3.1-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-scalaVersion  in ThisBuild := "2.11.7"
+scalaVersion  in ThisBuild := "2.12.1"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
@@ -45,38 +45,11 @@ libraryDependencies <++= (scalaVersion,liftVersion) { (sv,lv) =>
   Nil
 }
 
-//libraryDependencies <++= scalaVersion { sv => 
-//  (sv match {
-//      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
-//      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
-//      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
-// }) ::
-//    (sv match {
-//      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-//      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
-//      }) ::
-//  Nil
-//}
-
 libraryDependencies ++= { 
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   Nil
 }
-
-//################################################################
-//#### THE YUI COMPRESSION BUILD
-//##  2014-05-09 Turning of yui compression and switching to use 
-//##  provided compressed files as this plugin has not been updated
-//##  for use with sbt 0.13 
-//################################################################
-//seq(yuiSettings: _*)
-
-//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" 
-
-//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
-
-//YuiCompressorKeys.minSuffix := "-min"
 
 //################################################################
 //#### Publish to sonatype org
@@ -87,8 +60,6 @@ libraryDependencies ++= {
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
 
 credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
-
-//pgpPublicRing := file(Path.userHome / ".gnupg" / "mykey.asc")
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"
