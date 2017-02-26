@@ -1,6 +1,6 @@
 alias pub=publish-signed
 
-set version      in ThisBuild:="2.10"
+set version      in ThisBuild:="2.11-SNAPSHOT"
 
 set liftVersion  in ThisBuild:="2.6.2"
 
