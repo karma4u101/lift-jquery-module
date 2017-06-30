@@ -45,6 +45,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest Stable Releases:**
+- **2017-06-30** -- Module v2.10 artifact released for Lift 3.1 (Scala 2.11, 2.12)
 - **2016-12-14** -- Module v2.10 artifact released for Lift 3.0.1 (Scala 2.12)
 - **2016-06-31** -- Module v2.10 artifact released for Lift 2.6.2 (Scala 2.11,2.10,2.9.2,2.9.1-1,2.9.1), 3.0 (Scala 2.11)
 - **2015-08-08** -- Module v2.9 artifact released for Lift 2.6.2 (Scala 2.11,2.10,2.9.2,2.9.1-1,2.9.1), 3.0-M6 (Scala 2.11)
