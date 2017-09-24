@@ -1,0 +1,22 @@
+alias pub=publish-signed
+
+set version      in ThisBuild:="2.10"
+
+set liftVersion  in ThisBuild:="3.2.0-SNAPSHOT"
+
+set scalaVersion in ThisBuild:="2.12.2"
+
+project lift-jquery-module
+set parallelExecution in Test := false
+clean
+; compile ; test ; pub
+
+set scalaVersion in ThisBuild:="2.11.11"
+
+project lift-jquery-module
+set parallelExecution in Test := false
+clean
+; compile ; test ; pub
+
+
+
