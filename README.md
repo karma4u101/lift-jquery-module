@@ -45,6 +45,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/lift-jquery-module#history-log) section
 
 **Latest Releases:**
+- **2018-07-15** -- Module v2.10 artifact released for Lift 3.3 (Scala 2.11, 2.12)
 - **2017-09-24** -- Module v2.10 artifact released for Lift 3.2 (Scala 2.11, 2.12)
 - **2017-06-30** -- Module v2.10 artifact released for Lift 3.1 (Scala 2.11, 2.12)
 - **2016-12-14** -- Module v2.10 artifact released for Lift 3.0.1 (Scala 2.12)
@@ -76,15 +77,15 @@ release candidate (rcX) or milestone (mX) version part.
 
 For example:
 
-    "net.liftmodules" %% "lift-jquery-module_2.5 % "2.3"
+    "net.liftmodules" %% "lift-jquery-module_3.3 % "2.10"
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
-      <artifactId>lift-jquery-module_2.5_2.9.2</artifactId>
-      <version>2.3</version>
+      <artifactId>lift-jquery-module_3.3_2.12.6</artifactId>
+      <version>2.10</version>
     </dependency>
 
-The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
+The example will include module version 2.10 built for lift 3.3. If you are using maven observe that the artifact id also needs the Scala version.
 
 For older versions <= 2.3 put the following in your project build.sbt files lift libraryDependencies section 
 
@@ -97,17 +98,11 @@ Add
 
     import net.liftmodules.JQueryModule
     :
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1111 
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery310 
     JQueryModule.init()
 
-or 
 
-    import net.liftmodules.JQueryModule
-    :
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery111Z 
-    JQueryModule.init()
-
-The first one will initiate jquery version 1.11.1 the second one JQuery111Z will initiate version 1.11.z where z=[0,1,2,....] that automatical will give you the latest bugfix (incremental number) updates in the same major, minor series i.e gerneraly specifying JQuery[major][minor]Z can be used to point to the latest included bugfix release of a selected serie.  
+This will initiate jquery version 3.1.0. 
 
 
 In Lift template

@@ -7,6 +7,7 @@ Snapshot release for Lift v3.1-SNAPSHOT, 3.0.1 and 2.6.
 ## lift-jquery-module v2.10
 
 Released for Scala 2.11 and 2.12
+- [Issue #31](https://github.com/karma4u101/lift-jquery-module/issues/33) Release of v2.10 for Lift v3.3
 - [Issue #31](https://github.com/karma4u101/lift-jquery-module/issues/31) Release of v2.10 for Lift v3.2
 - [Issue #29](https://github.com/karma4u101/lift-jquery-module/issues/29) Release of v2.10 for Lift v3.1
 - [Issue #16](https://github.com/karma4u101/lift-jquery-module/issues/16) Improving the tests
