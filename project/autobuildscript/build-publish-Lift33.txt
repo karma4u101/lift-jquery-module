@@ -1,10 +1,10 @@
-alias pub=publish-signed
+alias pub=publishSigned
 
 set version      in ThisBuild:="2.10"
 
-set liftVersion  in ThisBuild:="3.2.0-SNAPSHOT"
+set LiftModuleKeys.liftVersion in ThisBuild := "3.3.0"
 
-set scalaVersion in ThisBuild:="2.12.2"
+set scalaVersion in ThisBuild:="2.12.6"
 
 project lift-jquery-module
 set parallelExecution in Test := false
